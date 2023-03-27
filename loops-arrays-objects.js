@@ -9,15 +9,19 @@ const scores = [
     {name: 'Rianne', score: 66, grade: null}
 ];
 
+
 // Verwachtte uitkomsten:
 // 83
 // 77
 // 92
-// 66ç
+// 66
 // ==========================================
 
-
-
+for (let i = 0; i < scores.length; i++) {
+    if (scores[i].score > 0) {
+        console.log(scores[i].score)
+    }
+}
 
 
 // ==========================================
@@ -32,9 +36,23 @@ const scores = [
 // D
 // ==========================================
 
-
-
-
+for (let i = 0; i < scores.length; i++) {
+    if (scores[i].score < 60) {
+        console.log("F")
+    }
+    if (scores[i].score >= 60 && scores[i].score < 70) {
+        console.log("D")
+    }
+    if (scores[i].score >= 70 && scores[i].score < 80) {
+        console.log("C")
+    }
+    if (scores[i].score >= 80 && scores[i].score < 90) {
+        console.log("B")
+    }
+    if (scores[i].score >= 90 && scores[i].score <= 100) {
+        console.log("A")
+    }
+}
 
 // ==========================================
 // Opdracht 1c
@@ -49,21 +67,40 @@ const scores = [
 //  ];
 // ==========================================
 
+for (let i = 0; i < scores.length; i++) {
+    if (scores[i].score < 60) {
+        scores[i].grade = "F";
+    }
+    if (scores[i].score >= 60 && scores[i].score < 70) {
+        scores[i].grade = "D";
+    }
+    if (scores[i].score >= 70 && scores[i].score < 80) {
+        scores[i].grade = "C";
+    }
+    if (scores[i].score >= 80 && scores[i].score < 90) {
+        scores[i].grade = "B";
+    }
+    if (scores[i].score >= 90 && scores[i].score <= 100) {
+        scores[i].grade = "A";
+    }
+}
 
-
-
+console.log(scores)
 
 // ==========================================
 // Opdracht 2
 // Schrijf een script die e-mailadressen genereert voor al onze medewerkers. Sla dit op in een nieuwe property "email" die je toevoegt aan iedere medewerker.
 
-const NOVIEmployees = [
-    {firstName: 'Nova', lastName: 'Eeken'},
-    {firstName: 'Sam', lastName: 'Barnhoorn'},
-    {firstName: 'Tessa', lastName: 'Steur'},
-    {firstName: 'Mark', lastName: 'Rensen'},
-];
+        const NOVIEmployees = [
+            {firstName: 'Nova', lastName: 'Eeken'},
+            {firstName: 'Sam', lastName: 'Barnhoorn'},
+            {firstName: 'Tessa', lastName: 'Steur'},
+            {firstName: 'Mark', lastName: 'Rensen'},
+        ];
 
+console.log("-------------------------")
+console.log("Eerst met hoofdletters!!!")
+console.log("-------------------------")
 // Bij NOVI horen de e-mailadressen altijd in het volgende format: voornaam.achternaam@novi.nl
 // Vóór het script zie je de originele objecten,
 // Na jouw script zie je de aangepaste objecten:
@@ -75,17 +112,23 @@ const NOVIEmployees = [
 //  ];
 // ==========================================
 
+for (let i = 0; i < NOVIEmployees.length; i++) {
+    NOVIEmployees[i].email = NOVIEmployees[i].firstName + "." + NOVIEmployees[i].lastName + "@novi.nl"
+        console.log(NOVIEmployees[i])
 
-
-
-
-
+}
+console.log("----------------------------")
+console.log("En nu zonder hoofdletters!!!")
+console.log("----------------------------")
 // Opdracht 2-BONUS
 // Lukt het je om ervoor te zorgen dat alle e-mailadressen in lowercase letters komen te staan? Dit heb je nog niet geleerd, maar google is your best friend...
 // ==========================================
 
+for (let i = 0; i < NOVIEmployees.length; i++) {
+    NOVIEmployees[i].email = NOVIEmployees[i].firstName.toLowerCase() + "." + NOVIEmployees[i].lastName.toLowerCase() + "@novi.nl"
+    console.log(NOVIEmployees[i])
 
-
+}
 
 // ==========================================
 // Opdracht 3
@@ -132,4 +175,22 @@ const students = [
 // ==========================================
 
 
+//==================================================================================================================
+//=========IK HEB GEEN TIJD GEHAD OM DEZE OPDRACHT AF TE MAKEN EN KWAM ER NIET UIT VOOR 23.59, =====================
+//=========ALS JE HET ANTWOORD WEET BEN IK BENIEUWD HOE JE DIT HEB GEDAAN, GROETEN EN BEDANKT. =====================
+//==================================================================================================================
+//       ||      ||      ||      ||      ||      ||      ||      ||      ||
+//       ||      ||      ||      ||      ||      ||      ||      ||      ||
+//       ||      ||      ||      ||      ||      ||      ||      ||      ||
+//     \    /  \    /  \    /  \    /  \    /  \    /  \    /  \    /  \    /
+//      \  /    \  /    \  /    \  /    \  /    \  /    \  /    \  /    \  /
+//       \/      \/      \/      \/      \/      \/      \/      \/      \/
+
+
+// for (let i = 0; i < students.length; i++) {
+//     switch (students[i].zipCode)
+//         case: students[i].neighborhood
+//         students[i].neighborhood = "Pijlsweerd"
+//     console.log(students)
+// }
 
